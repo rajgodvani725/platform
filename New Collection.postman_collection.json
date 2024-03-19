@@ -1,0 +1,779 @@
+{
+	"info": {
+		"_postman_id": "0e3aaaec-9950-4089-bb1a-41f72cbacead",
+		"name": "New Collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "25193607"
+	},
+	"item": [
+		{
+			"name": "Vendors",
+			"item": [
+				{
+					"name": "vendor register",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "username",
+									"value": "raj2",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "Raj@123",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "raj@raj.com",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/vendors/register/vendor",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"vendors",
+								"register",
+								"vendor"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "username",
+									"value": "raj2",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "Raj123456",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/vendors/login/vendor",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"vendors",
+								"login",
+								"vendor"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "vendor user create",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzEwODg3MzE2LCJpYXQiOjE3MTA4MDA5MTYsImp0aSI6IjJiNTQ3ZWY0Mjg3YjQ5MGFhMTUzZmY5ODhhMjFkMGU5IiwidXNlcl9pZCI6MTB9.kPQ46LnRtrIsr7dyC4IpMhxYtLek9J1ZtlCs1OB7iD0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "username",
+									"value": "raj_supervisor",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "Raj@123",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "raj@raj.com",
+									"type": "text"
+								},
+								{
+									"key": "role",
+									"value": "supervisor",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/vendors/register/user",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"vendors",
+								"register",
+								"user"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Admins",
+			"item": [
+				{
+					"name": "login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "username",
+									"value": "raj_admin",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "Raj@123",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/vendors/login/user",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"vendors",
+								"login",
+								"user"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "show users",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzEwNzk3NjkxLCJpYXQiOjE3MTA3OTczOTEsImp0aSI6IjE5ODhmNmVkZGFlNDQzMTVhNzIzNjY2N2RiOGRiOWU4IiwidXNlcl9pZCI6MTF9.4kpq0BJl8hprN9k083Zb-ZFtXMiEdVTMiJ_ezIZPz54",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/vendors/users",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"vendors",
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete user",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzEwNzk4MTA1LCJpYXQiOjE3MTA3OTc4MDUsImp0aSI6IjBmMDBkMDAxODIxMjRmZWQ4ODI0NTAyZjNiNTg3NDhmIiwidXNlcl9pZCI6MTF9.mN4Z6asax6tGprDs5iOhAC1f_DQtzH4C-PB_DuswTW8",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "username",
+									"value": "raj_supervisor",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/vendors/users",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"vendors",
+								"users"
+							],
+							"query": [
+								{
+									"key": "username",
+									"value": "",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get_stores",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzEwODg3NjQwLCJpYXQiOjE3MTA4MDEyNDAsImp0aSI6IjllZGEwNWM3MDc5NjQwNTBiMmYzNGIxNzZmOGI0OWNlIiwidXNlcl9pZCI6MTF9.A31kQT9DO7HNSSDWiIZZeP4krUoaDTIRDRL3zaqmxcA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/vendors/stores",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"vendors",
+								"stores"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create_store",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzEwODg3NjQwLCJpYXQiOjE3MTA4MDEyNDAsImp0aSI6IjllZGEwNWM3MDc5NjQwNTBiMmYzNGIxNzZmOGI0OWNlIiwidXNlcl9pZCI6MTF9.A31kQT9DO7HNSSDWiIZZeP4krUoaDTIRDRL3zaqmxcA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "location",
+									"value": "test",
+									"type": "text"
+								},
+								{
+									"key": "contact_details",
+									"value": "8154919878",
+									"type": "text"
+								},
+								{
+									"key": "name",
+									"value": "test",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/vendors/stores",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"vendors",
+								"stores"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "remove_store",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzEwODg1MjYxLCJpYXQiOjE3MTA3OTg4NjEsImp0aSI6Ijc5NDNlY2FhYzJiNzQwYjI4YjliZWQ3YjI2MmM0M2YzIiwidXNlcl9pZCI6MTF9.UrjvGKUOMGmIiAGns6AR6iOdVtovysJqArvRn5gvHgg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "test",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/vendors/stores",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"vendors",
+								"stores"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Supervisors",
+			"item": [
+				{
+					"name": "login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "username",
+									"value": "raj_supervisor",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "Raj@123",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/vendors/login/user",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"vendors",
+								"login",
+								"user"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get all stores-produts",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzEwODg3NDQ3LCJpYXQiOjE3MTA4MDEwNDcsImp0aSI6IjU5ZmUyNWQ2ZGZmNTRmZWE4ODVjNmQxNjVlZmFkMzM0IiwidXNlcl9pZCI6MTR9.84ihkwdGdP_WWrxbQ3bGmrEE3PcDfq4h_ILAM_D5mw0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/vendors/products",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"vendors",
+								"products"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "add product",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzEwODg3NDQ3LCJpYXQiOjE3MTA4MDEwNDcsImp0aSI6IjU5ZmUyNWQ2ZGZmNTRmZWE4ODVjNmQxNjVlZmFkMzM0IiwidXNlcl9pZCI6MTR9.84ihkwdGdP_WWrxbQ3bGmrEE3PcDfq4h_ILAM_D5mw0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"store\":\"test\",\r\n    \"name\": \"New Product\",\r\n    \"type\": \"Electronics\",\r\n    \"manufacturer\": \"ABC Company\",\r\n    \"price\": 100.00,\r\n    \"available_units\": 50,\r\n    \"sold_units\": 0\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/vendors/products",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"vendors",
+								"products"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "add products file",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzEwODg4NTA1LCJpYXQiOjE3MTA4MDIxMDUsImp0aSI6IjBhYThkNzM0MWJkZjRmZDVhNTQ2NTE5MDBhYzZiYzIzIiwidXNlcl9pZCI6MTR9.jhCT1V2gK_juI5RfyR1hVVaocOn8pCO0ZSqTJZVKWqM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "files",
+									"type": "file",
+									"src": "/C:/Users/rajgo/OneDrive/Desktop/Book1.xlsx"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/vendors/products",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"vendors",
+								"products"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "sales",
+			"item": [
+				{
+					"name": "login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "username",
+									"value": "raj_sales",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "Raj@123",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/vendors/login/user",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"vendors",
+								"login",
+								"user"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update sold product count",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzEwODkwNjYxLCJpYXQiOjE3MTA4MDQyNjEsImp0aSI6ImU1NjNjYzExM2ExNzQ2ZDdhMzA2ZjViYTY2M2YyNDM4IiwidXNlcl9pZCI6MTJ9._N9WDeFnfktxnLcRnONY_Tq9MyZg1txwsXQWnC30BCk",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "product",
+									"value": "p11",
+									"type": "text"
+								},
+								{
+									"key": "count",
+									"value": "5",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/vendors/sales/add-sell",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"vendors",
+								"sales",
+								"add-sell"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "users",
+			"item": [
+				{
+					"name": "login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "username_or_email",
+									"value": "raj1@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "@Aiypwzp@123",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/users/login",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"users",
+								"login"
+							],
+							"query": [
+								{
+									"key": "username_or_email",
+									"value": "raj@gmail.com",
+									"disabled": true
+								},
+								{
+									"key": "password",
+									"value": "@Aiypwzp@123",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email",
+									"value": "raj@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "@Aiypwzp@123",
+									"type": "text"
+								},
+								{
+									"key": "first_name",
+									"value": "raj",
+									"type": "text"
+								},
+								{
+									"key": "last_name",
+									"value": "Smith",
+									"type": "text"
+								},
+								{
+									"key": "username",
+									"value": "rajj",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/users/register",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"users",
+								"register"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
