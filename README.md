@@ -44,5 +44,3 @@ Install store management project with python 3.10.11
 ## License
 
 [MIT](https://choosealicense.com/licenses/mit/)
-
-ss
